@@ -1,7 +1,9 @@
 import axios from "axios";
 
+const URL = "https://mfa-poc-app.herokuapp.com/";
+
 export const API = axios.create({
-  baseURL: "https://mfa-poc-app.herokuapp.com/",
+  baseURL: URL,
   validateStatus: (status) => {
     if (status === 401) {
       localStorage.clear();

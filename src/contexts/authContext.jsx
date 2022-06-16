@@ -58,6 +58,7 @@ export function AuthContextProvider({ children }) {
     },
     {
       onSuccess: ({ data }) => {
+        console.log(data);
         if (!data.token || !data.user) {
           toast.error("Invalid credentials");
           return;

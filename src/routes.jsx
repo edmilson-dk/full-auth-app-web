@@ -4,6 +4,7 @@ import { useAuth } from "./contexts/authContext";
 import { Dashboard } from "./pages/dashboard";
 import { LoginPage } from "./pages/login";
 import { MFAAuthPage } from "./pages/mfa-auth";
+import { RegisterPage } from "./pages/register";
 
 function PrivateRoute({ children }) {
   const token = localStorage.getItem("token");
@@ -28,6 +29,7 @@ export function AppRoutes() {
       <Routes>
         <Route path="/login" element={<LoginPage />} />
         <Route path="/mfa-auth" element={<MFAAuthPage />} />
+        <Route path="/register" element={<RegisterPage />} />
 
         <Route
           path="/"
