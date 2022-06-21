@@ -39,6 +39,7 @@ export function Dashboard() {
 
     if (data.enabled) {
       toast.success("MFA enabled");
+      setQrcode(null);
       return;
     }
 
